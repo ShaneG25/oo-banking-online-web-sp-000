@@ -57,6 +57,7 @@ describe 'Transfer' do
       end
 
       transfer.valid?
+      
     end
   end
 
