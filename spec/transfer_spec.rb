@@ -28,7 +28,11 @@ describe 'Transfer' do
       expect(transfer.amount).to eq(50)
     end
   end
-  
+  describe 'Transfer' do
+    describe 'initialize' do
+      it "can initialize a Transfer" do
+        expect(transfer).to be_a(Transfer)
+      end
 
   describe '#valid?' do
     it "can check that both accounts are valid" do
