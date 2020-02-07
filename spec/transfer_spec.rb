@@ -28,6 +28,7 @@ describe 'Transfer' do
       expect(transfer.amount).to eq(50)
     end
   end
+  
 
   describe '#valid?' do
     it "can check that both accounts are valid" do
