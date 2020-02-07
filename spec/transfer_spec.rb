@@ -90,7 +90,8 @@ describe 'Transfer' do
       expect(amanda.balance).to eq(950)
       expect(avi.balance).to eq(1050)
     end
-    
+    it "calls on the sender and reciever's #valid? methods" do
+        transfer_class = File.read("lib/transfer.rb")
 
     it "rejects a transfer if the sender does not have enough funds (does not have a valid account)" do
       terrance.close_account
