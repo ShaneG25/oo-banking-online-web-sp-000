@@ -57,7 +57,8 @@ describe 'Transfer' do
       end
 
       transfer.valid?
-      
+      t "initializes with a transfer amount" do
+        expect(transfer.amount).to eq(50)
     end
   end
 
