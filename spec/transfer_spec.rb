@@ -46,7 +46,9 @@ describe 'Transfer' do
 
     it "calls on the sender and receiver's #valid? methods" do
       transfer_class = File.read("lib/transfer.rb")
-      
+      it "initializes with a receiver" do
+        expect(transfer.receiver).to eq(avi)
+      end
 
       expect(amanda).to receive(:valid?).and_return(true)
       expect(avi).to receive(:valid?).and_return(true)
