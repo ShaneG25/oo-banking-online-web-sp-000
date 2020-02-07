@@ -98,7 +98,8 @@ describe 'Transfer' do
       closed_account_transfer = Transfer.new(amanda, terrance, 50)
       expect(closed_account_transfer.execute_transaction).to eq("Transaction rejected. Please check your account balance.")
       expect(closed_account_transfer.status).to eq("rejected")
-      
+      expect(amanda).to receive(:valid?).and_return(true)
+        expect(avi).to receive(:valid?).and_return(true)
 
       expect(bad_transfer.execute_transaction).to eq("Transaction rejected. Please check your account balance.")
       expect(bad_transfer.status).to eq("rejected")
