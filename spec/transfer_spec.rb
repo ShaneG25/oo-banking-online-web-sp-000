@@ -118,6 +118,7 @@ describe 'Transfer' do
       expect(amanda.balance).to eq(1000)
       expect(transfer.status).to eq("reversed")
     end
+    
 
     it "it can only reverse executed transfers" do
       transfer.reverse_transfer
