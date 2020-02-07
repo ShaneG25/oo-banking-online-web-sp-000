@@ -40,6 +40,7 @@ describe 'Transfer' do
       expect(amanda.valid?).to eq(true)
       expect(transfer.valid?).to eq(true)
     end
+    
 
     it "calls on the sender and receiver's #valid? methods" do
       transfer_class = File.read("lib/transfer.rb")
