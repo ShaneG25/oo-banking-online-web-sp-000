@@ -52,7 +52,9 @@ describe 'Transfer' do
 
       expect(amanda).to receive(:valid?).and_return(true)
       expect(avi).to receive(:valid?).and_return(true)
-      
+      it "always initializes with a status of 'pending'" do
+        expect(transfer.status).to eq("pending")
+      end
 
       transfer.valid?
     end
